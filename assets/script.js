@@ -17,7 +17,6 @@ const slides = [
 	}
 ]
 
-
 // Les variables
 const arrowRight = document.querySelector(".arrow_right")
 const arrowLeft = document.querySelector(".arrow_left")
@@ -25,7 +24,6 @@ const dots = document.querySelector(".dots")
 let index = 0
 const img = document.querySelector(".banner-img")
 const p = document.querySelector("#banner p")
-
 
 // Afficher les points
 function dotDisplay() {
@@ -56,15 +54,12 @@ function clickRight() {
 }
 clickRight()
 
-
-
 // Clic flèche Gauche
 function clickLeft() {
 	arrowLeft.addEventListener("click", () => {
 		const dotslist = document.querySelectorAll(".dots .dot")
 		dotslist[index].classList.remove("dot_selected")
 		index--
-		console.log(index)
 		if (index < 0 ) {
 			index = slides.length -1
 		}
